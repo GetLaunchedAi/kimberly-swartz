@@ -1,15 +1,18 @@
 {
-  "name": "Iridium Manufacturing",
+  "name": "Open Arms Church",
   "email": "",
-  "phone": "586-884-6441",
-  "phoneFormatted": "(586) 884-6441",
+  "phone": "248-471-5282",
+  "phoneFormatted": "(248) 471-5282",
   "address": {
-    "lineOne": "12475 31 Mile Rd.",
+    "lineOne": "33015 7 Mile Rd",
     "lineTwo": "",
-    "city": "Washington",
+    "city": "Livonia",
     "county": "MI",
-    "postcode": "48095",
+    "postcode": "48152",
     "mapLink": ""
   },
-  "domain": ""
+  "domain": "",
+  "pastor": "Reverend Gradyn B. Jensen",
+  "denomination": "Pentecostal",
+  "affiliation": "Assemblies of God"
 }
