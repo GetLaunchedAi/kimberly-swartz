@@ -18,25 +18,25 @@
     --bodyTextColorWhite: #FAFBFC;
     --headerColor: #1a1a1a; */
 
-    --bg-dark: oklch(0.92 0.06 95.3);
-    --bg: oklch(0.96 0.06 95.3);
-    --bg-light: oklch(1 0.06 95.3);
-    --text: oklch(0.15 0.12 95.3);
-    --text-muted: oklch(0.4 0.12 95.3);
-    --highlight: oklch(1 0.12 95.3);
-    --border: oklch(0.6 0.12 95.3);
-    --border-muted: oklch(0.7 0.12 95.3);
-    --primary: oklch(0.6 0.12 95.3);
+    --bg-dark: oklch(0.92 0.06 29.5);
+    --bg: oklch(0.96 0.06 29.5);
+    --bg-light: oklch(1 0.06 29.5);
+    --text: oklch(0.15 0.12 29.5);
+    --text-muted: oklch(0.4 0.12 29.5);
+    --highlight: oklch(1 0.12 29.5);
+    --border: oklch(0.6 0.12 29.5);
+    --border-muted: oklch(0.7 0.12 29.5);
+    --primary: oklch(0.55 0.12 29.5);
     --secondary: oklch(0.4 0.12 65);
     --danger: oklch(0.5 0.12 30);
     --warning: oklch(0.5 0.12 100);
     --success: oklch(0.5 0.12 160);
     --info: oklch(0.5 0.12 260);
 
-    --bodyTextColorWhite: oklch(1 0.06 95.3);
+    --bodyTextColorWhite: oklch(1 0.06 29.5);
 
-    --text-inverted: oklch(0.96 0.1 95.3);
-    --text-muted-inverted: oklch(0.76 0.1 95.3);
+    --text-inverted: oklch(0.96 0.1 29.5);
+    --text-muted-inverted: oklch(0.76 0.1 29.5);
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -46,15 +46,15 @@
     --sectionPadding: clamp(3.75em, 7.82vw, 6.25em) 1rem;
   }
   :root body.dark-mode {
-    --bg-dark: oklch(0.1 0.06 95.3);      /* 1-0.92=0.08, floored at 0.1 */
-    --bg: oklch(0.15 0.06 95.3);          /* 1-0.96=0.04, floored at 0.15 */
-    --bg-light: oklch(0.2 0.06 95.3);     /* 1-1=0, floored at 0.2 */
-    --text: oklch(0.96 0.1 95.3);         /* inverted from 0.15, using text-inverted pattern */
-    --text-muted: oklch(0.76 0.1 95.3);   /* inverted from 0.4, using text-muted-inverted pattern */
-    --highlight: oklch(0.5 0.12 95.3);    /* midpoint */
-    --border: oklch(0.4 0.12 95.3);       /* 1-0.6=0.4 */
-    --border-muted: oklch(0.3 0.12 95.3); /* 1-0.7=0.3 */
-    --primary: oklch(0.76 0.12 95.3);     /* inverted from 0.6, brighter for contrast */
+    --bg-dark: oklch(0.1 0.06 29.5);      /* 1-0.92=0.08, floored at 0.1 */
+    --bg: oklch(0.15 0.06 29.5);          /* 1-0.96=0.04, floored at 0.15 */
+    --bg-light: oklch(0.2 0.06 29.5);     /* 1-1=0, floored at 0.2 */
+    --text: oklch(0.96 0.1 29.5);         /* inverted from 0.15, using text-inverted pattern */
+    --text-muted: oklch(0.76 0.1 29.5);   /* inverted from 0.4, using text-muted-inverted pattern */
+    --highlight: oklch(0.5 0.12 29.5);    /* midpoint */
+    --border: oklch(0.4 0.12 29.5);       /* 1-0.6=0.4 */
+    --border-muted: oklch(0.3 0.12 29.5); /* 1-0.7=0.3 */
+    --primary: oklch(0.7 0.12 29.5);      /* inverted from 0.55, brighter for contrast */
     --secondary: oklch(0.7 0.12 65);      /* inverted from 0.4, brighter for contrast */
     --danger: oklch(0.7 0.12 30);         /* inverted from 0.5, brighter for contrast */
     --warning: oklch(0.7 0.12 100);       /* inverted from 0.5, brighter for contrast */
@@ -585,11 +585,11 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* padding: 1rem 0; */
+    padding: 1rem 0;
   }
   #navigation .logo {
     margin-right: auto;
-    height: 14rem;
+    height: 8rem;
     width: auto;
   }
   #navigation .logo img {
@@ -811,7 +811,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     display: inline-block;
     margin: auto;
     width: auto;
-    height: 14rem !important;
+    height: 8rem !important;
     margin-bottom: 1.875em;
     text-align: center;
   }
