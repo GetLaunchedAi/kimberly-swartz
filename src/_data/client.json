@@ -1,18 +1,10 @@
 {
-  "name": "Open Arms Church",
-  "email": "",
-  "phone": "248-471-5282",
-  "phoneFormatted": "(248) 471-5282",
-  "address": {
-    "lineOne": "33015 7 Mile Rd",
-    "lineTwo": "",
-    "city": "Livonia",
-    "county": "MI",
-    "postcode": "48152",
-    "mapLink": ""
-  },
-  "domain": "",
-  "pastor": "Reverend Gradyn B. Jensen",
-  "denomination": "Pentecostal",
-  "affiliation": "Assemblies of God"
+  "name": "Kimberly Swartz",
+  "email": "info@wanderwonder.com",
+  "phone": "517-206-3922",
+  "phoneFormatted": "(517) 206-3922",
+  "domain": "kimswartz.art",
+  "businessType": "Multi-disciplinary Artist",
+  "tribe": "Turtle Lake St. Croix Chippewa",
+  "location": "Traveling Full Time"
 }

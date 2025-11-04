@@ -3,7 +3,7 @@
 //
 const navbarMenu = document.querySelector("#navigation #navbar-menu");
 const hamburgerMenu = document.querySelector("#navigation .hamburger-menu");
-const serviceMenu = document.querySelector("#navigation .dropdown");
+const dropdownMenus = document.querySelectorAll("#navigation .dropdown");
 const about = document.querySelector('#About\\ Us')
 const contact = document.querySelector('#Contact')
 
@@ -21,8 +21,11 @@ hamburgerMenu.addEventListener('click', function () {
         hamburgerMenu.setAttribute("aria-expanded", false);
         hamburgerMenu.classList.remove("clicked");
         navbarMenu.classList.remove("open");
-        serviceMenu.setAttribute("aria-expanded", false);
-        serviceMenu.classList.remove("open");
+        // Close all open dropdowns
+        dropdownMenus.forEach(dropdown => {
+            dropdown.setAttribute("aria-expanded", false);
+            dropdown.classList.remove("open");
+        });
         if (screenWidth < 770) {
             about.style.display = 'block'
             contact.style.display = 'block'
@@ -30,24 +33,27 @@ hamburgerMenu.addEventListener('click', function () {
     }
 });
 
-serviceMenu.addEventListener('click', function () {
-    const isServiceOpen = serviceMenu.classList.contains("open");
-    if (!isServiceOpen) {
-        serviceMenu.setAttribute("aria-expanded", true);
-        serviceMenu.classList.add("open");
-        if (screenWidth < 770) {
-            about.style.display = 'none'
-            contact.style.display = 'none'
-        }
-
-
-    } else {
-        serviceMenu.setAttribute("aria-expanded", false);
-        serviceMenu.classList.remove("open");
-        if (screenWidth < 770) {
-            about.style.display = 'block'
-            contact.style.display = 'block'
-        }
-
+// Add click handlers for all dropdowns
+dropdownMenus.forEach(dropdown => {
+    const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function () {
+            const isOpen = dropdown.classList.contains("open");
+            if (!isOpen) {
+                dropdown.setAttribute("aria-expanded", true);
+                dropdown.classList.add("open");
+                if (screenWidth < 770) {
+                    about.style.display = 'none'
+                    contact.style.display = 'none'
+                }
+            } else {
+                dropdown.setAttribute("aria-expanded", false);
+                dropdown.classList.remove("open");
+                if (screenWidth < 770) {
+                    about.style.display = 'block'
+                    contact.style.display = 'block'
+                }
+            }
+        });
     }
 });

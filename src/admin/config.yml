@@ -11,7 +11,7 @@ public_folder: '/images/blog'
 
 collections:
   - name: 'blog'
-    label: 'Blog'
+    label: 'Repair Journal'
     folder: 'src/blog'
     create: true
     slug: '{{pageName}}'
