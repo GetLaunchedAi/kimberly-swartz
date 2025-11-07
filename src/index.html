@@ -3,7 +3,7 @@ layout: "base.html"
 description: "Kimberly Swartz - Multi-disciplinary artist, photographer, and traveler. Exploring beauty and connection through art, photography, and storytelling. Traveling full time and sharing the journey."
 metaTitle: "Kimberly Swartz | Multi-disciplinary Artist & Photographer | Traveling Full Time"
 tagTitle: "Kimberly Swartz"
-preloadImg: "/images/landing-1920w.webp"
+preloadImg: "/images/hero/IMG_0261.jpeg"
 preloadCSS: "/css/home.css"
 permalink: "/"
 eleventyNavigation:
@@ -32,11 +32,43 @@ eleventyNavigation:
   </div>
 
   <div class="cs-video-wrapper">
-    <picture class="cs-picture">
-      <source media="(max-width: 600px)" srcset="/images/hero_img.png">
-      <source media="(min-width: 601px)" srcset="/images/hero_img.png">
-          <img loading="lazy" decoding="async" src="/images/hero_img.png" alt="Kimberly Swartz art and photography" width="630" height="877">
-    </picture>
+    <div class="cs-hero-slideshow">
+      <div class="cs-hero-slide cs-hero-slide-active">
+        <picture class="cs-picture">
+          <source media="(max-width: 600px)" srcset="/images/hero/IMG_0261.jpeg">
+          <source media="(min-width: 601px)" srcset="/images/hero/IMG_0261.jpeg">
+          <img loading="eager" decoding="async" src="/images/hero/IMG_0261.jpeg" alt="Kimberly Swartz art and photography" width="630" height="877">
+        </picture>
+      </div>
+      <div class="cs-hero-slide">
+        <picture class="cs-picture">
+          <source media="(max-width: 600px)" srcset="/images/hero/IMG_1865.jpeg">
+          <source media="(min-width: 601px)" srcset="/images/hero/IMG_1865.jpeg">
+          <img loading="lazy" decoding="async" src="/images/hero/IMG_1865.jpeg" alt="Kimberly Swartz art and photography" width="630" height="877">
+        </picture>
+      </div>
+      <div class="cs-hero-slide">
+        <picture class="cs-picture">
+          <source media="(max-width: 600px)" srcset="/images/hero/IMG_1943.jpeg">
+          <source media="(min-width: 601px)" srcset="/images/hero/IMG_1943.jpeg">
+          <img loading="lazy" decoding="async" src="/images/hero/IMG_1943.jpeg" alt="Kimberly Swartz art and photography" width="630" height="877">
+        </picture>
+      </div>
+      <div class="cs-hero-slide">
+        <picture class="cs-picture">
+          <source media="(max-width: 600px)" srcset="/images/hero/IMG_2716.jpeg">
+          <source media="(min-width: 601px)" srcset="/images/hero/IMG_2716.jpeg">
+          <img loading="lazy" decoding="async" src="/images/hero/IMG_2716.jpeg" alt="Kimberly Swartz art and photography" width="630" height="877">
+        </picture>
+      </div>
+      <div class="cs-hero-slide">
+        <picture class="cs-picture">
+          <source media="(max-width: 600px)" srcset="/images/hero/IMG_2792.jpeg">
+          <source media="(min-width: 601px)" srcset="/images/hero/IMG_2792.jpeg">
+          <img loading="lazy" decoding="async" src="/images/hero/IMG_2792.jpeg" alt="Kimberly Swartz art and photography" width="630" height="877">
+        </picture>
+      </div>
+    </div>
   </div>
 </section>
 <!-- ============================================ -->
@@ -67,18 +99,18 @@ eleventyNavigation:
           <source
             media="(max-width: 600px)"
             srcset="
-              /images/service_1.png
+              /images/service_1.jpeg
             "
           />
           <source
             media="(min-width: 601px)"
             srcset="
-              /images/service_1.png
+              /images/service_1.jpeg
             "
           />
           <img
             decoding="async"
-            src="/images/service_1.png"
+            src="/images/service_1.jpeg"
             alt="Art by Kimberly Swartz"
             width="413"
             height="374"
@@ -109,18 +141,18 @@ eleventyNavigation:
           <source
             media="(max-width: 600px)"
             srcset="
-              /images/service_2.png
+              /images/service_2.jpeg
             "
           />
           <source
             media="(min-width: 601px)"
             srcset="
-              /images/service_2.png
+              /images/service_2.jpeg
             "
           />
           <img
             decoding="async"
-            src="/images/service_2.png"
+            src="/images/service_2.jpeg"
             alt="Photography by Kimberly Swartz"
             width="413"
             height="374"
@@ -150,17 +182,17 @@ eleventyNavigation:
         <picture class="cs-picture">
           <source
             media="(max-width: 600px)"
-            srcset="/images/service_3.png"
+            srcset="/images/service_3.jpeg"
           />
           <source
             media="(min-width: 601px)"
             srcset="
-              /images/service_3.png
+              /images/service_3.jpeg
             "
           />
           <img
             decoding="async"
-            src="/images/service_3.png"
+            src="/images/service_3.jpeg"
             alt="Travel photography by Kimberly Swartz"
             width="413"
             height="374"
@@ -194,12 +226,12 @@ eleventyNavigation:
       <!--To make your own PNG cropped people, use https://www.remove.bg/ to remove the background of any image-->
       <!--Main Image-->
       <picture class="cs-picture fx slide-left">
-        <source media="(max-width: 600px)" srcset="/images/about_img_1.png" />
-        <source media="(min-width: 601px)" srcset="/images/about_img_1.png" />
+        <source media="(max-width: 600px)" srcset="/images/about_img_1.jpeg" />
+        <source media="(min-width: 601px)" srcset="/images/about_img_1.jpeg" />
         <img
           loading="lazy"
           decoding="async"
-          src="/images/about_img_1.png"
+          src="/images/about_img_1.jpeg"
           alt="Kimberly Swartz"
           aria-hidden="true"
         />
@@ -253,8 +285,8 @@ eleventyNavigation:
 <section id="sbs-r">
   <div class="cs-container">
     <div class="cs-left fx slide-left">
-      {% image './src/images/featured_img_1.png', 'precision manufacturing', 'cs-picture cs-picture1', 'lazy'%} {% image
-      './src/images/featured_img_2.png', 'contract manufacturing', 'cs-picture
+      {% image './src/images/featured_img_1.jpeg', 'precision manufacturing', 'cs-picture cs-picture1', 'lazy'%} {% image
+      './src/images/featured_img_2.jpeg', 'contract manufacturing', 'cs-picture
       cs-picture2', 'lazy'%}
     </div>
     <div class="cs-right fx slide-right">
@@ -345,7 +377,7 @@ eleventyNavigation:
     </p>
     <a href="/contact" class="button-solid">Contact Me</a>
   </div>
-  {% image './src/images/final_home_img.png', 'Kimberly Swartz art and photography', '',
+  {% image './src/images/final_home_img.jpeg', 'Kimberly Swartz art and photography', '',
   'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
 </section>
 

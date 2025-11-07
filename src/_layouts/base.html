@@ -142,8 +142,12 @@
 
         <script defer src="/assets/js/nav.js"></script>
         <script defer src="/assets/js/dark.js"></script>
+        {% if page.url == '/' %}
+        <script defer src="/assets/js/hero-slideshow.js"></script>
+        {% endif %}
         {% if page.url and '/gallery/' in page.url %}
         <script defer src="/assets/js/lightbox.js"></script>
+        <script defer src="/assets/js/gallery-load-more.js"></script>
         {% endif %}
 
         <!--
