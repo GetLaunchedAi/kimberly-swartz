@@ -145,7 +145,7 @@
   #navigation #navbar-menu ul li a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #000;
+    color: var(--primary);
     font-size: 1.1875em;
     text-align: center;
     display: inline-block;
@@ -311,7 +311,7 @@
   #navigation #navbar-menu ul li a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #000;
+    color: var(--primary);
     font-size: 1.1875em;
     text-align: center;
     display: inline-block;

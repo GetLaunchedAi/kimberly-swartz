@@ -190,6 +190,7 @@
 @media only screen and (min-width: 0em) {
   #cta {
     position: relative;
+    overflow: hidden;
     padding: 3.125rem 0;
   }
   #cta:before {
@@ -202,10 +203,12 @@
     opacity: .7;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: 1;
   }
   #cta .container {
     text-align: center;
+    position: relative;
+    z-index: 2;
   }
   #cta picture {
     position: absolute;
@@ -213,7 +216,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: -2;
+    z-index: 0;
   }
   #cta picture img {
     position: absolute;
@@ -240,6 +243,22 @@
     margin-bottom: 2.25rem;
     width: 96%;
     max-width: 37.375rem;
+  }
+  #cta .cta-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  #cta .cta-button-group .button-outline {
+    border-color: #fff;
+    color: #fff;
+  }
+  #cta .cta-button-group .button-outline:hover {
+    border-color: transparent;
+    background-color: #fff;
+    color: #000;
   }
 }
 /* Small Desktop */
@@ -276,6 +295,9 @@
   #cta .container {
     width: 90.0625%;
     margin: auto;
+  }
+  #cta .cta-button-group {
+    flex-direction: row;
   }
   #cta picture {
     width: 90.0625%;

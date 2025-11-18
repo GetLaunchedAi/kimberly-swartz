@@ -18,25 +18,30 @@
     --bodyTextColorWhite: #FAFBFC;
     --headerColor: #1a1a1a; */
 
-    --bg-dark: oklch(0.92 0.06 29.5);
-    --bg: oklch(0.96 0.06 29.5);
-    --bg-light: oklch(1 0.06 29.5);
-    --text: oklch(0.15 0.12 29.5);
-    --text-muted: oklch(0.4 0.12 29.5);
-    --highlight: oklch(1 0.12 29.5);
-    --border: oklch(0.6 0.12 29.5);
-    --border-muted: oklch(0.7 0.12 29.5);
-    --primary: oklch(0.55 0.12 29.5);
-    --secondary: oklch(0.4 0.12 65);
-    --danger: oklch(0.5 0.12 30);
-    --warning: oklch(0.5 0.12 100);
-    --success: oklch(0.5 0.12 160);
-    --info: oklch(0.5 0.12 260);
+    --bg-dark: #c3b088;
+    --bg: #dfceac;
+    --bg-light: #f7ecda;
+    --text: #2f2a26;
+    --text-muted: #5c4f43;
+    --highlight: #ffeea4;
+    --border: #cdbb99;
+    --border-muted: #e4d6bb;
+    --primary: #117aac;
+    --primaryShade: #0f6f9b;
+    --primaryDark: #0b4f72;
+    --secondary: #946b2d;
+    --secondaryLight: #d7b075;
+    --accentPink: #ffeea4;
+    --accentGreen: #a4eac9;
+    --danger: #b85c4c;
+    --warning: #e6b860;
+    --success: #4da58a;
+    --info: #7fb2ce;
 
-    --bodyTextColorWhite: oklch(1 0.06 29.5);
+    --bodyTextColorWhite: #fffdf7;
 
-    --text-inverted: oklch(0.96 0.1 29.5);
-    --text-muted-inverted: oklch(0.76 0.1 29.5);
+    --text-inverted: #f4efe7;
+    --text-muted-inverted: #d1c7b4;
 
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -46,20 +51,20 @@
     --sectionPadding: clamp(3.75em, 7.82vw, 6.25em) 1rem;
   }
   :root body.dark-mode {
-    --bg-dark: oklch(0.1 0.06 29.5);      /* 1-0.92=0.08, floored at 0.1 */
-    --bg: oklch(0.15 0.06 29.5);          /* 1-0.96=0.04, floored at 0.15 */
-    --bg-light: oklch(0.2 0.06 29.5);     /* 1-1=0, floored at 0.2 */
-    --text: oklch(0.96 0.1 29.5);         /* inverted from 0.15, using text-inverted pattern */
-    --text-muted: oklch(0.76 0.1 29.5);   /* inverted from 0.4, using text-muted-inverted pattern */
-    --highlight: oklch(0.5 0.12 29.5);    /* midpoint */
-    --border: oklch(0.4 0.12 29.5);       /* 1-0.6=0.4 */
-    --border-muted: oklch(0.3 0.12 29.5); /* 1-0.7=0.3 */
-    --primary: oklch(0.7 0.12 29.5);      /* inverted from 0.55, brighter for contrast */
-    --secondary: oklch(0.7 0.12 65);      /* inverted from 0.4, brighter for contrast */
-    --danger: oklch(0.7 0.12 30);         /* inverted from 0.5, brighter for contrast */
-    --warning: oklch(0.7 0.12 100);       /* inverted from 0.5, brighter for contrast */
-    --success: oklch(0.7 0.12 160);       /* inverted from 0.5, brighter for contrast */
-    --info: oklch(0.7 0.12 260);          /* inverted from 0.5, brighter for contrast */
+    --bg-dark: #0b2d3a;
+    --bg: #0f3e52;
+    --bg-light: #14546f;
+    --text: #f4efe7;
+    --text-muted: #c4d5d9;
+    --highlight: #a4eac9;
+    --border: #1b566b;
+    --border-muted: #1f647c;
+    --primary: #58bdd7;
+    --secondary: #ddb47a;
+    --danger: #ff8975;
+    --warning: #ffcf7b;
+    --success: #7dd4b3;
+    --info: #9ed1ef;
   }
   /* roboto-regular - latin */
   @font-face {
@@ -79,6 +84,20 @@
     
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+  @font-face {
+    font-family: 'Amsterdam One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Amsterdam One'), url('/assets/fonts/AmsterdamOne.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Good Karma';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Good Karma'), url('/assets/fonts/GoodKarma-Regular.woff2') format('woff2');
+  }
   /* roboto-900 - latin */
   @font-face {
     font-family: 'Roboto';
@@ -95,6 +114,7 @@
     font-size: 100%;
     font-family: 'Roboto', Arial, sans-serif;
     color: var(--text);
+    background-color: var(--bg-light);
     overflow-x: hidden;
   }
   *,
@@ -165,7 +185,7 @@
     transition-delay: .1s;
   }
   .button-solid:hover {
-    color: #fff;
+    color: var(--bodyTextColorWhite);
   }
   .button-solid:hover:before {
     width: 100%;
@@ -179,9 +199,81 @@
     top: 0;
     left: 0;
     z-index: -1;
-    background-color: #000;
+    background-color: var(--secondary);
     width: 0;
     transition: width .3s;
+  }
+  .button-outline {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    line-height: 3.125em;
+    height: 3.125rem;
+    padding: 0 1.875rem;
+    border: 2px solid var(--primary);
+    border-radius: 999px;
+    color: var(--primary);
+    transition: background-color .3s, color .3s, border-color .3s;
+  }
+  .button-outline:hover {
+    background-color: var(--primary);
+    color: var(--bodyTextColorWhite);
+    border-color: transparent;
+  }
+  #navigation #navbar-menu .nav-travel-blog {
+    margin-bottom: 0;
+  }
+  #navigation #navbar-menu .nav-travel-blog .button-outline {
+    width: 100%;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  #navigation #navbar-menu .nav-travel-blog .button-outline:before {
+    display: none;
+  }
+  .travel-blog-cta {
+    padding: clamp(3rem, 8vw, 5rem) 1rem;
+    background: var(--bg-light);
+    text-align: center;
+  }
+  .travel-blog-cta .container {
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+  .travel-blog-topper {
+    font-size: var(--topperFontSize);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  .travel-blog-cta h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+  .travel-blog-cta p {
+    max-width: 48rem;
+    margin: 0 auto 1.5rem auto;
+    color: var(--text-muted);
+  }
+  body.dark-mode .travel-blog-cta {
+    background: var(--bg-dark);
+  }
+  body.dark-mode .travel-blog-cta h2,
+  body.dark-mode .travel-blog-cta p {
+    color: var(--bodyTextColorWhite);
   }
   .skip {
     position: absolute;
@@ -189,6 +281,14 @@
     left: 0;
     opacity: 0;
     z-index: -1111111;
+  }
+}
+@media only screen and (min-width: 64em) {
+  #navigation #navbar-menu .nav-travel-blog {
+    margin-left: 1.5rem;
+  }
+  #navigation #navbar-menu .nav-travel-blog .button-outline {
+    width: auto;
   }
 }
 /* Reset Margins */
@@ -304,7 +404,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     background-color: var(--medium);
 }
 .dropdown-menu li a {
-  color: #ffffff;
+  color: var(--bodyTextColorWhite);
   text-align: center;
   font-weight: 700;
   font-size: 1rem;
@@ -502,7 +602,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
   #navigation #navbar-menu.open {
     position:absolute;
     height: fit-content;
-    padding-top: 1.25rem;
+    padding: 1.25rem .5rem;
     z-index: 9999;
   }
   #navigation #navbar-menu.open ul li {
@@ -521,10 +621,10 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
 @media only screen and (min-width: 64em) {
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 0.375em rgba(0, 0, 0, 0.3);
-    background-color: #fff;
+    background-color: var(--bg);
   }
   ::-webkit-scrollbar-track-piece {
-    background-color: #f0f0f0;
+    background-color: var(--bg-light);
   }
   ::-webkit-scrollbar {
     width: 0.75em;
@@ -545,13 +645,13 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     display: block;
   }
   body.scroll #navigation #navbar-menu ul li a {
-    color: #1a1a1a;
+    color: var(--text);
   }
   body.scroll #navigation #navbar-menu ul li a.active {
     color: var(--primary);
   }
   body.scroll #dark-mode-toggle svg path {
-    fill: #000;
+    fill: var(--text);
   }
   body.dark-mode #navigation .background-color-div {
     height: 100%;
@@ -589,7 +689,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
   }
   #navigation .logo {
     margin-right: auto;
-    height: 8rem;
+    height: 10rem;
     width: auto;
   }
   #navigation .logo img {
@@ -616,7 +716,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     position: relative;
     display: inline-block;
     z-index: 1;
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     transition: color .3s;
   }
   #navigation #navbar-menu ul li a:before {
@@ -668,11 +768,11 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     background-color: var(--dark);
   }
   body.dark-mode #navigation .hamburger-menu span {
-    background-color: #fff;
+    background-color: var(--bodyTextColorWhite);
   }
   body.dark-mode #navigation .hamburger-menu span:before,
   body.dark-mode #navigation .hamburger-menu span:after {
-    background-color: #fff;
+    background-color: var(--bodyTextColorWhite);
   }
   body.dark-mode #navigation .logo .light {
     display: block;
@@ -684,7 +784,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     background-color: var(--medium);
   }
   body.dark-mode #navigation #navbar-menu ul li a {
-    color: #fff;
+    color: var(--bodyTextColorWhite);
   }
   body.dark-mode #navigation #navbar-menu ul li a.active {
     color: var(--primary);
@@ -702,7 +802,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     display: none !important;
   }
   body.dark-mode #navigation #navbar-menu ul li a {
-    color: #fff;
+    color: var(--bodyTextColorWhite);
   }
   body.dark-mode #navigation #navbar-menu ul li a.active {
     color: var(--primary);
@@ -729,8 +829,8 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     display: block;
     height: 100%;
     width: 100%;
-    background: #000;
-    opacity: .7;
+    background: linear-gradient(180deg, rgba(17, 122, 172, 0.25) 0%, rgba(17, 122, 172, 0.75) 100%);
+    opacity: .85;
     top: 0;
     left: 0;
     z-index: -1;
@@ -752,7 +852,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     object-fit: cover;
   }
   #int-hero h1 {
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     font-size: 2.13333333rem;
     text-align: center;
     margin: 0 auto;
@@ -763,7 +863,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     margin-bottom: 1.875rem;
   }
   #int-hero p {
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     text-align: center;
     max-width: 25rem;
     margin: auto;
@@ -798,7 +898,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
 /* Mobile */
 @media only screen and (min-width: 0em) {
   #footer {
-    background: #1C1C1C;
+    background: linear-gradient(180deg, var(--primaryDark), var(--dark));
     padding: 5.25rem 0 1.25rem;
     font-size: min(4vw, 1.2em);
   }
@@ -811,7 +911,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     display: inline-block;
     margin: auto;
     width: auto;
-    height: 8rem !important;
+    height: 10rem !important;
     margin-bottom: 1.875em;
     text-align: center;
   }
@@ -823,7 +923,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
   #footer .left-section p {
     font-size: 0.875rem;
     line-height: 1.92857143;
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     opacity: .9;
     text-align: center;
     width: 100%;
@@ -869,13 +969,13 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
   #footer .right-section .lists ul li {
     list-style: none;
     margin-bottom: 0.75rem;
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     font-size: 1.125rem;
     opacity: .9;
   }
   #footer .right-section .lists ul li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     line-height: 1.16666667em;
     transition: color .3s;
   }
@@ -883,7 +983,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     color: var(--primary);
   }
   #footer .right-section .lists ul h2 {
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     font-size: 1.125rem;
     line-height: 1.16666667em;
     margin-bottom: 2.3125rem;
@@ -913,7 +1013,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     width: 15.625rem;
   }
   #footer .credit {
-    color: #fff;
+    color: var(--bodyTextColorWhite);
     width: 96%;
     margin: auto;
     text-align: center;
