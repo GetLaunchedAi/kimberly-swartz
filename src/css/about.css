@@ -46,6 +46,9 @@
     left: 0;
     top: 0;
   }
+  #sbs .cs-picture1 img {
+    transform: rotate(180deg);
+  }
   #sbs .cs-picture2 {
     width: 25.875em;
     height: 25em;
