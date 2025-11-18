@@ -135,8 +135,14 @@
     /* 16px - 32px */
     right: clamp(1rem, 4vw, 2rem);
   }
-  #sbs .button-solid {
+  #sbs .cs-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     margin-top: 2rem;
+  }
+  #sbs .button-solid {
+    margin-top: 0;
   }
 }
 /* Desktop - 1024px */
@@ -152,6 +158,10 @@
   }
   #sbs .cs-right {
     margin: 0;
+  }
+  #sbs .cs-button-group {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 /* Dark Mode */
