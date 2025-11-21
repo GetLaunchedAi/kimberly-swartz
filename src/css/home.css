@@ -53,16 +53,15 @@
   #hero-2042 .cs-title {
     /* 39px - 61px */
     font-size: clamp(2.4375rem, 5vw, 3.8125rem);
-    font-family: 'Amsterdam One', 'Good Karma', 'Roboto', cursive;
-    color: var(--text);
-    background-color: rgba(247, 236, 218, 0.92);
-    border-radius: 0.35rem;
-    padding: 0.35rem 0.85rem;
+    font-family: 'Amsterdam One', 'Dancing Script', 'Playball', 'Kalam', 'Good Karma', 'Roboto', cursive;
+    color: white !important;
     display: inline-block;
+    font-weight: 700;
   }
   #hero-2042 .cs-text {
-    margin-bottom: 2rem;
-    color: var(--text-muted-inverted);
+    margin-bottom: 0;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.95;
   }
   #hero-2042 .cs-button-group {
     display: flex;
@@ -224,18 +223,8 @@
     pointer-events: none;
   }
   #hero-2042 .cs-video-wrapper:before {
-    /* Overlay - gradient for better text readability */
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 16.54%, rgba(0, 0, 0, 0.64) 59.41%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-    /* prevents the cursor from interacting with it */
-    pointer-events: none;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
+    /* Overlay removed for clean, minimal look */
+    display: none;
   }
   body.dark-mode #hero-2042 .cs-title {
     color: #000;
@@ -254,7 +243,8 @@
     align-items: flex-start;
   }
   #hero-2042 .cs-video-wrapper::before {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 51.02%, rgba(0, 0, 0, 0.64) 75.13%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    /* Dark fade overlay removed for clean, minimal look */
+    display: none;
   }
 }
 

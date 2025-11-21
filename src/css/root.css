@@ -89,7 +89,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local('Amsterdam One'), url('/assets/fonts/AmsterdamOne.ttf') format('truetype');
+    src: url('/assets/fonts/AmsterdamOne-eZ12l.ttf') format('truetype');
   }
   @font-face {
     font-family: 'Good Karma';
@@ -448,7 +448,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
   }
   #navigation .logo {
     display: inline-block;
-    height: 4rem;
+    height: 6rem;
     width: auto;
   }
   #navigation .logo img {
@@ -689,7 +689,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
   }
   #navigation .logo {
     margin-right: auto;
-    height: 10rem;
+    height: 12rem;
     width: auto;
   }
   #navigation .logo img {
@@ -911,7 +911,7 @@ body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
     display: inline-block;
     margin: auto;
     width: auto;
-    height: 10rem !important;
+    height: 12rem !important;
     margin-bottom: 1.875em;
     text-align: center;
   }
